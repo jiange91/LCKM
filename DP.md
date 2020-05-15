@@ -1,6 +1,6 @@
 # Dynamic Programming is Sh*t
 
-### 278:
+### Problem 278:
 
 1. Normal euqation to obtain average
     ```
@@ -25,3 +25,18 @@
     return rear;
     ```
 
+### Problem 540
+
+1. Find unique element in a list of even number of integers.
+    ```
+    k = nums[0];
+    for (int i : nums[0])
+        k ^= i;
+    ```
+    Bitwise `^` operator set bit to 1 if different, 0 otherwise.
+
+2. Elegant use of `^`
+    ```
+    nums[i ^ 1];
+    ```
+    Get preceeding element if current index is odd number, otherwise get the rear one.
